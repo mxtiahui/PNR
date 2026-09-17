@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partido Nacional Republicano | PNR</title>
+    <!-- Importando fuentes sugeridas: Montserrat para encabezados y una sans-serif limpia para el cuerpo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Variables de color basadas en la identidad institucional */
+      :root {
+        --pnr-green: #006847;
+        --pnr-red: #ce1126;
+        --pnr-dark: #2c3539;
+        --pnr-light-bg: #f9f9f9;
+        --pnr-white: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: var(--pnr-dark);
+        background-color: var(--pnr-light-bg);
+        line-height: 1.6;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      /* Encabezado */
+      header {
+        background-color: var(--pnr-white);
+        padding: 2rem 1rem;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      header img {
+        max-width: 250px;
+        height: auto;
+      }
+
+      /* Sección Hero / Lema principal */
+      .hero {
+        padding: 4rem 2rem;
+        text-align: center;
+        background: linear-gradient(
+          to bottom,
+          var(--pnr-white),
+          var(--pnr-light-bg)
+        );
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+        color: var(--pnr-dark);
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+      }
+
+      /* Sección de Pilares (Cards) */
+      .pillars-section {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .pillars-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .pillar-card {
+        background-color: var(--pnr-white);
+        padding: 2.5rem 2rem;
+        border-radius: 8px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        border-top: 5px solid #ccc;
+        transition: transform 0.3s ease;
+      }
+
+      .pillar-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .pillar-card:nth-child(1) {
+        border-top-color: var(--pnr-dark);
+      }
+      .pillar-card:nth-child(2) {
+        border-top-color: var(--pnr-green);
+      }
+      .pillar-card:nth-child(3) {
+        border-top-color: var(--pnr-red);
+      }
+
+      .pillar-number {
+        font-size: 3rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        color: #ddd;
+        margin-bottom: 0.5rem;
+        line-height: 1;
+      }
+
+      .pillar-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--pnr-dark);
+      }
+
+      .pillar-subtitle {
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+      }
+
+      .pillar-card p {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 1.5rem;
+      }
+
+      .pillar-divider {
+        width: 50px;
+        height: 2px;
+        background-color: #eee;
+        margin: 1.5rem auto;
+      }
+
+      /* Sección Call to Action */
+      .cta-section {
+        padding: 5rem 2rem;
+        text-align: center;
+        background-color: var(--pnr-white);
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: var(--pnr-green);
+        color: var(--pnr-white);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        text-transform: uppercase;
+        box-shadow: 0 4px 15px rgba(0, 104, 71, 0.3);
+        transition:
+          background-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background-color: #005036;
+        box-shadow: 0 6px 20px rgba(0, 104, 71, 0.4);
+      }
+
+      /* Pie de página */
+      footer {
+        background-color: var(--pnr-dark);
+        color: var(--pnr-white);
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+        .cta-button {
+          font-size: 1rem;
+          padding: 1rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Encabezado con el Logo referenciado a la carpeta assets -->
+    <header>
+      <img
+        src="assets/Logo PNR 2026.png"
+        alt="Logotipo Partido Nacional Republicano"
+      />
+    </header>
+
+    <main>
+      <!-- Título Principal -->
+      <section class="hero">
+        <h1>Por un México Unido y Fuerte</h1>
+      </section>
+
+      <!-- Propuestas / Pilares -->
+      <section class="pillars-section">
+        <div class="pillars-grid">
+          <!-- Pilar 1 -->
+          <div class="pillar-card">
+            <div class="pillar-number">1</div>
+            <h3>Estado de Derecho</h3>
+            <div class="pillar-subtitle">
+              Orden, justicia y seguridad sin privilegios.
+            </div>
+            <div class="pillar-divider"></div>
+            <p>
+              Lucha frontal al crimen y aplicación firme de la ley para
+              garantizar instituciones fuertes y seguridad ciudadana real.
+            </p>
+          </div>
+
+          <!-- Pilar 2 -->
+          <div class="pillar-card">
+            <div class="pillar-number">2</div>
+            <h3>Educación</h3>
+            <div class="pillar-subtitle">
+              Excelencia y valores para nuestras generaciones.
+            </div>
+            <div class="pillar-divider"></div>
+            <p>
+              Educación de calidad, enfoque en ciencia y formación en valores
+              cívicos. El futuro se construye en las aulas.
+            </p>
+          </div>
+
+          <!-- Pilar 3 -->
+          <div class="pillar-card">
+            <div class="pillar-number">3</div>
+            <h3>Empresa</h3>
+            <div class="pillar-subtitle">
+              Libertad para emprender y crear empleos.
+            </div>
+            <div class="pillar-divider"></div>
+            <p>
+              Fomento a la inversión, reducción de trámites, disminución de
+              impuestos y crecimiento económico en apoyo al emprendedor.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Botón de Acción -->
+      <section class="cta-section">
+        <a href="#" class="cta-button">Se parte de un México unido y fuerte</a>
+      </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+      <p>
+        &copy; 2026 Partido Nacional Republicano (PNR). Todos los derechos
+        reservados.
+      </p>
+      <p>pnr.org.mx</p>
+    </footer>
+  </body>
+</html>
